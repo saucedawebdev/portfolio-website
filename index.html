@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ramon's Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">Ramon Sauceda</div>
+            <div class="header-actions">
+                <nav>
+                    <ul>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#journey" class="nav-link">Journey</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <div class="badge">Navy Veteran | Front-End Developer</div>
+                    <h1>Building Clean, responsive <span>web experiences.</span></h1>
+                    <p> I'm a Navy Veteran transitioning into Front-End Development through discipline learning, hands-on projects, and a strong foundation in HTML, CSS, and JavaScript.</p>
+                    <div class="buttons">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn secondary" href="#contact">Contact Me</a>
+                    </div>
+                </div>
+
+                <aside class="profile-card">
+                    <h2>Currently Learning</h2>
+                    <ul>
+                        <li>JavaScript DOM Manipulation</li>
+                        <li>React Components & State</li>
+                        <li>Responsive Web Design</li>
+                        <li>Portfolio Development</li>
+                        <li>TSTC Web Design and Development Associate's Degree</li>
+                    </ul>           
+                </aside>
+            </section>
+
+            <section id="about">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-text">I completed the Meta Front-End Developer Course and I'm now building projects to solidify my skills and prepare for junior front-end developer roles. My background in military operations, first responder services, education, and logistics has strengthened my discipline, communication, teamwork, and problem-solving skills.</p>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-grid">
+                    <article class="project-card" data-project="portfolio">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive personal portfolio with dark mode, smooth scrolling, active navigation highlighting, and a project modal.</p>
+                        <button class="btn primary project-btn">View Details</button>
+                    </article>
+                    <article class="project-card" data-project="recipe">
+                        <h3>Recipe Page</h3>
+                        <p>A responsive recipe page built during the Meta Front-End Developer course, focusing on semantic HTML and modern CSS layout.</p>
+                        <button class="btn primary project-btn">View Details</button>
+                    </article>
+                    <article class="project-card" data-project="water-tracker">
+                        <h3>Daily Water Tracker</h3>
+                        <p>A hydration tracking app that lets users log glasses of water throughout the day. Includes add, subtract, and reset controls with motivational feedback when daily goals are reached.</p>
+                        <button class="btn primary project-btn">View Details</button>
+                    </article>
+                    <article class="project-card" data-project="tip-calculator">
+                        <h3>Tip Calculator</h3>
+                        <p>A simple tip calculator that takes a bill amount and tip percentage, then calculates and displays the total. Built with form inputs and JavaScript event handling.</p>
+                        <button class="btn primary project-btn">View Details</button>
+                    </article>
+                    <article class="project-card" data-project="romeo-vaughn-portfolio">
+                        <h3>Romeo Vaughn Portfolio</h3>
+                        <p>A portfolio website built for Romeo Vaughn to showcase his latest released music, upcoming shows, and contact information, built with HTML, CSS, and JavaScript.</p>
+                        <button class="btn primary project-btn">View Details</button>
+                    </article>
+                </div>
+            </section>
+
+            <section id="journey">
+              <div class="journey-card">
+                <h2 class="section-title">From Service to Software</h2>
+
+                <div class="journey-item">
+                    <h3>U.S Navy</h3>
+                    <p>Aviation Boatswain's Mate Plane Handler | Aircraft Firefighter | Security Forces</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>FedEx Ground</h3>
+                    <p>Delivery Driver</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>La Feria ISD</h3>
+                    <p>Maintenance Department</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>La Feria ISD</h3>
+                    <p>Substitute Teacher</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>La Feria Fire Dept.</h3>
+                    <p>Firefighter | Hazmat Operations | Engine Operator</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>La Feria ISD</h3>
+                    <p>Security Officer</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>USPS</h3>
+                    <p>Rural Carrier</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="journey-item">
+                    <h3>Future Goals</h3>
+                    <p>Junior Front-End Developer | Full Stack Developer | TSTC Web Design and Development Associate's Degree</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Front-End</h3>
+                        <p>HTML, CSS, JavaScript, React</p>
+                    </div>
+                    <div class="card">
+                        <h3>Developer Tools</h3>
+                        <p>Git, GitHub, VS Code, Terminal</p>
+                    </div>
+                    <div class="card">
+                        <h3>Currently Learning</h3>
+                        <p>Advanced JavaScript, Advanced React, soon to start Web Design and Development Associate's Degree at Text State Technical College</p>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience">
+                    <div class="card card-navy">
+                        <h3>U.S Navy</h3>
+                        <p>Aviation Boatswain's Mate Plane Handler, Aircraft Firefighter, and Security Forces, Teamwork, Leadership, Discipline, Accountability, Communication, 5 years of honorable service, Honorably Discharged.</p>
+                    </div>
+                    <div class="card card-fedex-ground">
+                        <h3>FedEx Ground</h3>
+                        <p>Delivery Driver, Communication, Time Management, Reliability, and Customer Service.</p>
+                    </div>
+                    <div class="card card-maintenance-department">
+                        <h3>La Feria ISD Maintenance Department</h3>
+                        <p>Maintenance of school buildings and grounds, equipment, and systems.</p>
+                    </div>
+                    <div class="card card-substitute-teacher">
+                        <h3>Substitute Teacher</h3>
+                        <p>Classroom leadership, management, communication,adaptability, and problem-solving.</p>
+                    </div>
+                    <div class="card card-firefighter">
+                        <h3>Volunteer Firefighter</h3>
+                        <p>Emergency response, Hazardous Materials Operations, Engine Operator, teamwork, accountability, leadership, and community service.</p>
+                    </div>
+                    <div class="card card-security-officer">
+                        <h3>La Feria ISD Security Officer</h3>
+                        <p>Patrolling, and awareness of campus and surrounding areas, communication, and protecting the safety of the students and staff.</p>
+                    </div>
+                    <div class="card card-usps-rural-carrier">
+                        <h3>USPS Rural Carrier</h3>
+                        <p>Independent route management, time management, reliability, and customer service.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-text">I'm actively building projects and preparing for my first Front-End Developer role.</p>
+                <p>Email: ramonsauceda931@yahoo.com</p>
+                <p>GitHub: <a href="https://github.com/ramonsauceda931-png">github.com/ramonsauceda931-png</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Ramon Sauceda. From Service to Software.</p>
+        </footer>
+
+        <div class="modal" id="project-modal" aria-hidden="true">
+            <div class="modal-overlay"></div>
+            <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <div class="modal-tags" id="modal-tags"></div>
+                <a id="modal-link" class="btn primary" href="#" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
