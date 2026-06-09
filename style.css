@@ -426,7 +426,7 @@ section {
 
 .card-usps-rural-carrier {
     background-image: url('images/USPS.jpeg');
-    background-size: 115%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position:  relative;
