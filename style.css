@@ -56,6 +56,38 @@ a {
     text-decoration: none;
 }
 
+.freelance-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 12px 8%;
+    background: var(--accent-dark);
+    color: #ffffff;
+    text-align: center;
+}
+
+.freelance-banner p {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.banner-btn {
+    background: #ffffff;
+    color: var(--accent-dark);
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.banner-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 header {
     padding: 24px 8%;
     display: flex;
@@ -112,6 +144,11 @@ nav ul {
 
 [data-theme="light"] .logo-text-brand {
     color: var(--text);
+}
+
+[data-theme="light"] .logo-image,
+[data-theme="light"] .footer-logo {
+    mix-blend-mode: normal;
 }
 
 nav a {
@@ -575,7 +612,10 @@ section {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 18px;
-    padding: 28px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -585,14 +625,45 @@ section {
     box-shadow: 0 12px 32px var(--shadow);
 }
 
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    border-bottom: 1px solid var(--border);
+}
+
 .project-card h3 {
     color: var(--text);
-    margin-bottom: 10px;
+    margin: 20px 28px 10px;
+}
+
+.project-card h4 {
+    color: var(--text-subtle);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 28px 10px;
 }
 
 .project-card p {
     color: var(--text-muted);
-    margin-bottom: 18px;
+    margin: 0 28px 18px;
+    flex-grow: 1;
+}
+
+.project-card .project-btn {
+    display: block;
+    width: calc(100% - 56px);
+    margin: 0 28px 28px;
+    text-align: center;
+    font-family: inherit;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.project-card .project-btn + .project-btn {
+    margin-top: 10px;
 }
 
 .modal {
@@ -653,6 +724,19 @@ section {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 24px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.modal-actions .btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .modal-close {
@@ -722,6 +806,22 @@ section {
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.card li::before {
+    content: "✔ ";
+    color: #3b82f6;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
 [data-theme="light"] #skills .section-title,
 [data-theme="light"] #skills .card h3,
 [data-theme="light"] #skills .card p {
@@ -757,15 +857,37 @@ section {
 }
 
 #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     max-width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 34px;
     color: var(--text-muted);
-    margin-bottom: 34px;
     padding: 40px 8%;
     background: var(--contact-bg);
     border-radius: 24px;
     border: 1px solid var(--border);
+}
+
+#contact .section-title,
+#contact .section-text,
+#contact p {
+    text-align: center;
+    width: 100%;
+}
+
+#contact .section-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: var(--accent);
 }
 
 footer {
@@ -786,6 +908,15 @@ footer {
 }
 
 @media (max-width: 850px) {
+    .freelance-banner {
+        padding: 14px 6%;
+        gap: 12px;
+    }
+
+    .freelance-banner p {
+        font-size: 0.9rem;
+    }
+
     header {
         flex-direction: column;
         gap: 12px;

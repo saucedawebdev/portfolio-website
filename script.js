@@ -21,40 +21,53 @@ sections.forEach((section) => navObserver.observe(section));
 
 // --- Project popup modal ---
 const projects = {
-    portfolio: {
-        title: 'Portfolio Website',
+    'romeo-vaughn-website': {
+        title: 'Romeo Vaughn Website',
         description:
-            'Personal portfolio built with HTML, CSS, and JavaScript. Features smooth scrolling, active navigation, project modals, and a dark/light theme toggle.',
+            'A portfolio website built for Romeo Vaughn to showcase his latest released music, upcoming shows, and contact information, built with HTML, CSS.',
+        tags: ['HTML', 'CSS',],
+        link: 'https://github.com/saucedawebdev/romeo-vaughn-website',
+        demo: 'https://saucedawebdev.github.io/romeo-vaughn-website/',
+    },
+    'rio-grande-fitness-website': {
+        title: 'Rio Grande Fitness Website',
+        description:
+            'A website built for Rio Grande Fitness to showcase their services, pricing, and contact information, built with HTML, CSS, and JavaScript.',
         tags: ['HTML', 'CSS', 'JavaScript'],
-        link: 'https://github.com/ramonsauceda931-png',
+        link: 'https://github.com/saucedawebdev/rio-grande-fitness-website',
+        demo: 'https://saucedawebdev.github.io/rio-grande-fitness-website/',
     },
-    recipe: {
-        title: 'Recipe Page',
+    'firefigher-incident-tracker': {
+        title: 'Firefighter Incident Tracker',
         description:
-            'A responsive recipe page built during the Meta Front-End Developer course, focusing on semantic HTML and modern CSS layout.',
-        tags: ['HTML', 'CSS'],
-        link: 'https://github.com/ramonsauceda931-png',
+            'A web application built for firefighters to track their incidents, built with JavaScript, HTML, and CSS.',
+        tags: ['HTML', 'CSS', 'JavaScript'],
+        link: 'https://github.com/saucedawebdev/firefigher-incident-tracker',
+        demo: 'https://saucedawebdev.github.io/firefigher-incident-tracker/',
     },
-    'water-tracker': {
+    'habit-tracker-app': {
+        title: 'Habit Tracker',
+        description:
+            'A productivity app that lets users track their habits, goals, and progress, built with JavaScript, HTML, and CSS.',
+        tags: ['HTML', 'CSS', 'JavaScript', 'DOM'],
+        link: 'https://github.com/saucedawebdev/habit-tracker',
+        demo: 'https://saucedawebdev.github.io/habit-tracker/',
+    },
+    'daily-water-tracker-app': {
         title: 'Daily Water Tracker',
         description:
-            'A hydration tracking app that lets users log glasses of water throughout the day. Includes add, subtract, and reset controls with motivational feedback when daily goals are reached.',
-        tags: ['HTML', 'CSS', 'JavaScript', 'DOM'],
-        link: 'https://github.com/ramonsauceda931-png',
+            'A health and wellness app that lets users track their water intake, built with JavaScript, HTML, and CSS.',
+        tags: ['HTML', 'CSS', 'JavaScript'],
+        link: 'https://github.com/saucedawebdev/daily-water-tracker',
+        demo: 'https://saucedawebdev.github.io/daily-water-tracker/',
     },
-    'tip-calculator': {
+    'tip-calculator-app': {
         title: 'Tip Calculator',
         description:
-            'A simple tip calculator that takes a bill amount and tip percentage, then calculates and displays the total. Built with form inputs and JavaScript event handling.',
+            'A calculator app that lets users calculate tips, built with JavaScript, HTML, and CSS.',
         tags: ['HTML', 'CSS', 'JavaScript'],
-        link: 'https://github.com/ramonsauceda931-png',
-    },
-    'romeo-vaughn-portfolio': {
-        title: 'Romeo Vaughn Portfolio',
-        description:
-            'A portfolio website built for Romeo Vaughn to showcase projects, skills, and professional experience with a clean, responsive layout.',
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        link: 'https://github.com/ramonsauceda931-png',
+        link: 'https://github.com/saucedawebdev/tip-calculator',
+        demo: 'https://saucedawebdev.github.io/tip-calculator/',
     },
 };
 
@@ -63,6 +76,7 @@ const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalTags = document.getElementById('modal-tags');
 const modalLink = document.getElementById('modal-link');
+const modalDemo = document.getElementById('modal-demo');
 
 function openModal(projectId) {
     const project = projects[projectId];
@@ -71,6 +85,7 @@ function openModal(projectId) {
     modalTitle.textContent = project.title;
     modalDescription.textContent = project.description;
     modalTags.innerHTML = project.tags.map((tag) => `<span class="tag">${tag}</span>`).join('');
+    modalDemo.href = project.demo;
     modalLink.href = project.link;
 
     modal.classList.add('open');
@@ -85,7 +100,7 @@ function closeModal() {
 }
 
 document.querySelectorAll('.project-card').forEach((card) => {
-    card.querySelector('.project-btn').addEventListener('click', () => {
+    card.querySelector('button.project-btn').addEventListener('click', () => {
         openModal(card.dataset.project);
     });
 });
